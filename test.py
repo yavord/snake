@@ -3,13 +3,15 @@ import util
 
 
 class UiHandler():
-    def __init__(self, name, data):
-        self.name = name
-        self.data = data
-    
-    def processEvent(self):
+    def __init__(self, ui):
+        self.ui = ui
+
+    def processEvent(self, self.ui):
+        event = ui.get_event()
         pass
 
+def processEvent(event):
+    print(event.name)
 
 def main():
     ui = SnakeUserInterface(
@@ -19,7 +21,8 @@ def main():
         )
 
     while True:
-        ui.get_event()
+        event = ui.get_event()
+        processEvent(event)
         
 
 if __name__ == "__main__":
