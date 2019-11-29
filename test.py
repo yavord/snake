@@ -21,7 +21,6 @@ def main():
     while True:
         ui.get_event()
         
-        
 
 if __name__ == "__main__":
     main()
