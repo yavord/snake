@@ -6,9 +6,10 @@ class UiHandler():
     def __init__(self, ui):
         self.ui = ui
 
-    def processEvent(self, self.ui):
+    def processEvent(self, ui):
         event = ui.get_event()
-        pass
+        print(event.name)
+        
 
 def processEvent(event):
     print(event.name)
@@ -20,9 +21,10 @@ def main():
         util.dimensions['scale']
         )
 
+    handler = UiHandler(ui)
+
     while True:
-        event = ui.get_event()
-        processEvent(event)
+        handler.processEvent
         
 
 if __name__ == "__main__":
