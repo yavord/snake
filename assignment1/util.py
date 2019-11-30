@@ -4,5 +4,3 @@ dimensions = {
     'height' : 100,
     'scale' : 0.5,
 }
-
-
