@@ -18,10 +18,13 @@ def processEvent(event, ui):
 
     if event.name == 'click':
         coords = event.data.split(' ')
-        ui.place(int(coords[0]), int(coords[1]), 4)
-        ui.print_('wall placed at '+coords[0]+' '+coords[1])
-        ui.show
-    # else if event.data == 'space':
+        ui.place(int(coords[0]), int(coords[1]), 6)
+        ui.print_('wall placed at '+coords[0]+' '+coords[1]+' ')
+        ui.show()
+    elif event.data == 'space':
+        ui.clear()
+        ui.show()
+        ui.print_('space pressed, ui cleared')
 
         
 
@@ -37,7 +40,6 @@ def main():
 
     while True:
         event = ui.get_event()
-        ui.place(50,50,6)
         processEvent(event, ui)
         
 
