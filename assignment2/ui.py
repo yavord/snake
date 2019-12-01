@@ -9,6 +9,7 @@ class Ui:
         self.ui = SnakeUserInterface(height+1, width+1, scale)
         self.wall = [0, 0]
         self.animationSpeed = 10
+        self.color = 6
 
 
     def setAnimationSpeed(self, action):
@@ -34,12 +35,14 @@ class Ui:
 
         if event.name == 'alarm':
             if wall[0] < width:
-                ui.place(wall[0], wall[1], 6)
+                ui.place(wall[0], wall[1], self.color)
                 ui.show()
+                ui.clear()
                 wall[0] += 1
             elif wall[0] == width:
-                ui.place(wall[0], wall[1], 6)
+                ui.place(wall[0], wall[1], self.color)
                 ui.show()
+                ui.clear()
                 wall[0] = 0
                 if wall[1] < height:
                     wall[1] += 1
@@ -50,3 +53,8 @@ class Ui:
                 self.setAnimationSpeed('decrease')
             elif event.data == 'r':
                 self.setAnimationSpeed('increase')
+        elif event.data == 'g':
+            if self.color == 6:
+                self.color = 2
+            elif self.color == 2:
+                self.color = 6
