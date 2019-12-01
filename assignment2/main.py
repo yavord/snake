@@ -1,15 +1,15 @@
 from ipy_lib import SnakeUserInterface
-import ui
-import wall
-import controller
+import ui as u
+import wall as w
+# import controller as c
 
 
 def main():
-    w = wall.Wall()
-    u = ui.Ui()
+    ui = u.Ui()
+    ui.setAnimationSpeed('default')
 
     while True:
-        u.processEvent()
+        ui.processEvent()   
 
 
 if __name__ == "__main__":
