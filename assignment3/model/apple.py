@@ -1,7 +1,5 @@
-import sys
-sys.path.append('..')
-import util
-from ipy_lib import SnakeUserInterface as s
+import assignment3.util as util
+from assignment3.ipy_lib import SnakeUserInterface as s
 
 class Apple:
     def __init__(self):
@@ -9,5 +7,5 @@ class Apple:
         self.color = 4
 
     def placeApple(self):
-        self.coords = [s.random(util.width),s.random(util.height)]
+        self.coords = [s.random(util.width), s.random(util.height)]
 

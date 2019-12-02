@@ -1,7 +1,5 @@
 import snakepiece as s
-import sys
-sys.path.append('..')
-import util
+import assignment3.util as util
 
 class Snake:
     def __init__(self):
@@ -13,6 +11,6 @@ class Snake:
 
     def growSnake(self):
         lastIndex = self.snake[-1]
-        self.snake.append(s.SnakePiece)
+        
 
 
