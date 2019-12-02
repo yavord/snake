@@ -1,5 +1,5 @@
 class SnakePiece:
-    def __init__(self):
-        self.coords = []
-        self.color = 
-        self.direction = 
+    def __init__(self, coords, direction):
+        self.coords = coords
+        self.color = 2
+        self.direction = direction
