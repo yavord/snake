@@ -1,5 +1,5 @@
 import snakepiece as s
-import assignment3.util as util
+import assignment3 as util
 
 class Snake:
     def __init__(self):
@@ -10,7 +10,5 @@ class Snake:
         ]
 
     def growSnake(self):
-        lastIndex = self.snake[-1]
-        
-
-
+        # lastIndex = self.snake[-1]
+        pass

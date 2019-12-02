@@ -1,5 +1,5 @@
-import assignment3.util as util
-from assignment3.ipy_lib import SnakeUserInterface as s
+# import assignment3.util as util
+# from assignment3.ipy_lib import SnakeUserInterface as s
 
 class Apple:
     def __init__(self):
