@@ -7,5 +7,6 @@ class Apple:
         self.color = 4
 
     def placeApple(self):
-        self.coords = [s.random(util.width), s.random(util.height)]
-
+        pass
+        # self.coords = [s.random(util.width), s.random(util.height)]
+            

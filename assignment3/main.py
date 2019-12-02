@@ -1,14 +1,18 @@
 from ipy_lib import SnakeUserInterface
-import util as u
+import util
+from model import *
+from controller import *
 
 
 def main():
     ui = SnakeUserInterface(
-        u.height,
-        u.width,
-        u.scale
+        util.height,
+        util.width,
+        util.scale
     )
     ui.set_animation_speed(30)
+    
+    
 
     while True:
         ui.show()
