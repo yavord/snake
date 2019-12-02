@@ -1,4 +1,4 @@
-from assignment3.model import *
+# from assignment3.model import *
 from assignment3.ipy_lib import SnakeUserInterface
 
 class SnakeController:

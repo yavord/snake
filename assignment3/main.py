@@ -1,7 +1,8 @@
 from ipy_lib import SnakeUserInterface
 import util
-from model import *
-from controller import *
+from model import Apple
+from model import Snake
+from controller import SnakeController
 
 
 def main():
@@ -13,10 +14,10 @@ def main():
     ui.set_animation_speed(30)
     
     snake = Snake()
-    apple = Apple()
+    # apple = Apple()
 
     snakeController = SnakeController(snake, ui)
-    appleController = AppleController(apple, ui)
+    # appleController = AppleController(apple, ui)
     
     while True:
         snakeController.placeSnake()
