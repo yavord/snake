@@ -1,18 +1,8 @@
 from lib.ipy_lib import SnakeUserInterface
 from lib.util import height, width, scale
+from lib.process_event import processEvent
 from controller import *
 from model import *
-
-
-def processEvent(event, snakeController, appleController, ui):
-    if event.name == 'alarm':
-        ui.clear()
-        appleController.placeApple()
-        snakeController.animateSnake()
-        snakeController.placeSnake()
-        ui.show()
-    elif event.name == 'arrow':
-        snakeController.changeDirection(event.data)
 
 
 def main():
@@ -30,7 +20,7 @@ def main():
     while True:
         event = ui.get_event()
         processEvent(event, snakeController, appleController, ui)
-        
+
 
 if __name__ == "__main__":
     main()
