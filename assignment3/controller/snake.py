@@ -4,22 +4,13 @@ class SnakeController:
         self.ui = ui
     
     def animateSnake(self):
-        for snakePiece in self.snake.snake:
-            if snakePiece.direction == 'u':
-                snakePiece.y -= 1
-            elif snakePiece.direction == 'd':
-                snakePiece.y += 1
-            elif snakePiece.direction == 'l':
-                snakePiece.x -= 1
-            elif snakePiece.direction == 'r':
-                snakePiece.x += 1
+        self.snake.moveSnakeOneOver()
 
     def changeDirection(self, direction):
         self.snake.changeFirstIndexDirection(direction)
 
     def updateDirections(self):
-        for i in range(len(self.snake.snake)-1, 0, -1):
-            self.snake.snake[i].direction = self.snake.snake[i-1].direction
+        self.snake.getNewDirections()
 
     def eatApple(self):
         self.snake.growSnake()

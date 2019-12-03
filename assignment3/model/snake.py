@@ -8,6 +8,17 @@ class Snake:
             SnakePiece(width/2-2, height/2, 'r'),
         ]
 
+    def moveSnakeOneOver(self):
+        for snakePiece in self.snake:
+            if snakePiece.direction == 'u':
+                snakePiece.y -= 1
+            elif snakePiece.direction == 'd':
+                snakePiece.y += 1
+            elif snakePiece.direction == 'l':
+                snakePiece.x -= 1
+            elif snakePiece.direction == 'r':
+                snakePiece.x += 1
+
     def growSnake(self):
         lastIndex = self.snake[-1]
         if lastIndex.direction == 'l':
@@ -29,3 +40,6 @@ class Snake:
         elif self.snake[0].direction == 'r' and direction != 'l':
             self.snake[0].direction = direction
 
+    def getNewDirections(self):
+        for i in range(len(self.snake)-1, 0, -1):
+            self.snake[i].direction = self.snake[i-1].direction
