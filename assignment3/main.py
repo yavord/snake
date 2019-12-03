@@ -1,6 +1,7 @@
-from lib import *
-from model import *
-from controller import SnakeController
+from lib.ipy_lib import SnakeUserInterface
+from lib.util import height, width, scale
+from controller.snake import SnakeController
+from model.snake import Snake
 
 
 def main():
@@ -11,7 +12,7 @@ def main():
     )
     ui.set_animation_speed(30)
     
-    snake = Snake()
+    snake = Snake(height, width)
 
     snakeController = SnakeController(snake, ui)
     
