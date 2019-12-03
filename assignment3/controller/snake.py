@@ -24,8 +24,8 @@ class SnakeController:
         elif self.snake.snake[0].direction == 'r' and direction != 'l':
             self.snake.snake[0].direction = direction
 
-    def updatePositions(self):
-        for i in range(1,len(self.snake.snake)):
+    def updateDirections(self):
+        for i in range(len(self.snake.snake)-1, 0, -1):
             self.snake.snake[i].direction = self.snake.snake[i-1].direction
 
     def eatApple(self):
