@@ -23,12 +23,14 @@ def main():
     )
     ui.set_animation_speed(30)
     snake = Snake(height, width)
+    apple = Apple()
     snakeController = SnakeController(snake, ui)
+    appleController = AppleController(apple, ui)
     
     while True:
-        snakeController.placeSnake()
-        ui.show()
-
+        event = ui.get_event()
+        processEvent(event, snakeController, appleController, ui)
+        
 
 if __name__ == "__main__":
     main()
