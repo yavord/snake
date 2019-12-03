@@ -7,7 +7,15 @@ class SnakeController:
         pass
 
     def changeDirection(self, direction):
-        pass
+        if self.snake[0].direction == 'u' and direction != 'd':
+            self.snake[0].direction = direction
+        elif self.snake[0].direction == 'd' and direction != 'u':
+            self.snake[0].direction = direction
+        elif self.snake[0].direction == 'l' and direction != 'r':
+            self.snake[0].direction = direction
+        elif self.snake[0].direction == 'r' and direction != 'l':
+            self.snake[0].direction = direction
+
 
     def eatApple(self):
         self.snake.growSnake()

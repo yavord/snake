@@ -16,10 +16,12 @@ def main():
     apple = Apple()
     snakeController = SnakeController(snake, ui)
     appleController = AppleController(apple, ui)
+    snakeController.placeSnake()
     
     while True:
         event = ui.get_event()
         processEvent(event, snakeController, appleController, ui)
+        print(snake.snake[0].direction)
 
 
 if __name__ == "__main__":

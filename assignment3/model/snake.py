@@ -18,3 +18,7 @@ class Snake:
             self.snake.append(SnakePiece(lastIndex.x, lastIndex.y+1, lastIndex.direction))
         elif lastIndex.direction == 'd':
             self.snake.append(SnakePiece(lastIndex.x, lastIndex.y-1, lastIndex.direction))
+
+    # def changeFirstIndexDirection(self):
+    #     firstIndex = self.snake[0]
+

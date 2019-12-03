@@ -5,4 +5,5 @@ class AppleController:
         self.ui = ui
 
     def placeApple(self):
-        self.apple.getNewApple()
+        # self.apple.getNewApple()
+        pass
