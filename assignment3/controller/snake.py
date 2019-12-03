@@ -25,10 +25,8 @@ class SnakeController:
             self.snake.snake[0].direction = direction
 
     def updatePositions(self):
-        i = 1
-        for snakePiece in self.snake.snake:
-            snakePiece.direction = self.snake.snake[i-1].direction
-            i += 1
+        for i in range(1,len(self.snake.snake)):
+            self.snake.snake[i].direction = self.snake.snake[i-1].direction
 
     def eatApple(self):
         self.snake.growSnake()
