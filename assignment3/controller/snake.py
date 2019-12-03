@@ -35,10 +35,13 @@ class SnakeController:
         firstIndex = self.snake.snake[0]
         if [firstIndex.x, firstIndex.y] == [apple.x, apple.y]:
             return True
-        else: return False
+        for i in range(1, len(self.snake.snake)-1):
+            if [firstIndex.x, firstIndex.y] == [self.snake.snake[i].x, self.snake.snake[i].y]:
+                return self.gameOver 
 
     def gameOver(self):
-        pass
+        self.ui.print_('Game Over')
+        self.ui.stay_open()
 
     def placeSnake(self):
         for snakepiece in self.snake.snake:
