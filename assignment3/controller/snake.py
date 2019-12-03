@@ -45,4 +45,7 @@ class SnakeController:
 
     def placeSnake(self):
         for snakepiece in self.snake.snake:
-            self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
+            try:
+                self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
+            except:
+                return self.gameOver
