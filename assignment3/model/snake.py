@@ -43,3 +43,4 @@ class Snake:
     def getNewDirections(self):
         for i in range(len(self.snake)-1, 0, -1):
             self.snake[i].direction = self.snake[i-1].direction
+            

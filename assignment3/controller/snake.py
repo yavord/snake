@@ -21,10 +21,10 @@ class SnakeController:
             return True
         for i in range(1, len(self.snake.snake)-1):
             if [firstIndex.x, firstIndex.y] == [self.snake.snake[i].x, self.snake.snake[i].y]:
-                return self.gameOver 
+                return False 
 
     def gameOver(self):
-        self.ui.print_('Game Over')
+        self.ui.print_('Game Over ')
         self.ui.stay_open()
 
     def placeSnake(self):
@@ -33,3 +33,4 @@ class SnakeController:
                 self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
             except:
                 return self.gameOver
+                #TODO: check how to set up try/catch statements
