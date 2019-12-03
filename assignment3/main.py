@@ -1,6 +1,4 @@
-from lib.ipy_lib import SnakeUserInterface
-from lib.util import height, width, scale, speed
-from lib.event_handler import eventHandler
+from lib import *
 from controller import *
 from model import *
 
