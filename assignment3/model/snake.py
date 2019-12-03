@@ -19,6 +19,13 @@ class Snake:
         elif lastIndex.direction == 'd':
             self.snake.append(SnakePiece(lastIndex.x, lastIndex.y-1, lastIndex.direction))
 
-    # def changeFirstIndexDirection(self):
-    #     firstIndex = self.snake[0]
+    def changeFirstIndexDirection(self, direction):
+        if self.snake[0].direction == 'u' and direction != 'd':
+            self.snake[0].direction = direction
+        elif self.snake[0].direction == 'd' and direction != 'u':
+            self.snake[0].direction = direction
+        elif self.snake[0].direction == 'l' and direction != 'r':
+            self.snake[0].direction = direction
+        elif self.snake[0].direction == 'r' and direction != 'l':
+            self.snake[0].direction = direction
 

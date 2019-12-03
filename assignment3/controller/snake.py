@@ -15,14 +15,7 @@ class SnakeController:
                 snakePiece.x += 1
 
     def changeDirection(self, direction):
-        if self.snake.snake[0].direction == 'u' and direction != 'd':
-            self.snake.snake[0].direction = direction
-        elif self.snake.snake[0].direction == 'd' and direction != 'u':
-            self.snake.snake[0].direction = direction
-        elif self.snake.snake[0].direction == 'l' and direction != 'r':
-            self.snake.snake[0].direction = direction
-        elif self.snake.snake[0].direction == 'r' and direction != 'l':
-            self.snake.snake[0].direction = direction
+        self.snake.changeFirstIndexDirection(direction)
 
     def updateDirections(self):
         for i in range(len(self.snake.snake)-1, 0, -1):
