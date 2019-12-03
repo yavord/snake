@@ -21,8 +21,6 @@ def main():
     while True:
         event = ui.get_event()
         processEvent(event, snakeController, appleController, ui)
-        print(snake.snake[0].direction)
-
 
 if __name__ == "__main__":
     main()
