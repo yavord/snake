@@ -1,5 +1,5 @@
-from ipy_lib import SnakeUserInterface
-import util
+from lib import util
+from lib.ipy_lib import SnakeUserInterface
 from model import Apple
 from model import Snake
 from controller import SnakeController

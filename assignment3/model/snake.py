@@ -1,5 +1,5 @@
 import snakepiece as s
-import assignment3 as util
+import assignment3.lib.util as util
 
 class Snake:
     def __init__(self):
