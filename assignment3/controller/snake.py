@@ -3,7 +3,10 @@ class SnakeController:
         self.snake = snake
         self.ui = ui
     
-    def animateSnake(self, direction):
+    def animateSnake(self):
+        pass
+
+    def changeDirection(self, direction):
         pass
 
     def eatApple(self):

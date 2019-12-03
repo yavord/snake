@@ -4,6 +4,17 @@ from controller import *
 from model import *
 
 
+def processEvent(event, snakeController, appleController, ui):
+    if event.name == 'alarm':
+        ui.clear()
+        appleController.placeApple()
+        snakeController.animateSnake()
+        snakeController.placeSnake()
+        ui.show()
+    elif event.name == 'arrow':
+        snakeController.changeDirection(event.data)
+
+
 def main():
     ui = SnakeUserInterface(
         height,
@@ -17,6 +28,7 @@ def main():
     while True:
         snakeController.placeSnake()
         ui.show()
+
 
 if __name__ == "__main__":
     main()
