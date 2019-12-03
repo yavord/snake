@@ -1,4 +1,4 @@
-height = 100
-width = 100
-scale = 0.5
+height = 10
+width = 10
+scale = 1
 speed = 24
