@@ -31,6 +31,12 @@ class SnakeController:
     def eatApple(self):
         self.snake.growSnake()
 
+    def checkSnakePosition(self, apple):
+        firstIndex = self.snake.snake[0]
+        if [firstIndex.x, firstIndex.y] == [apple.x, apple.y]:
+            return True
+        else: return False
+
     def gameOver(self):
         pass
 
