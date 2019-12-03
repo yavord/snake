@@ -7,3 +7,4 @@ def processEvent(event, snakeController, appleController, ui):
         ui.show()
     elif event.name == 'arrow':
         snakeController.changeDirection(event.data)
+        

@@ -1,9 +1,11 @@
 
 class Apple:
     def __init__(self):
-        self.coords = []
+        self.x = None
+        self.y = None
         self.color = 4
 
-    def placeApple(self):
-        # self.coords = [s.random(util.width), s.random(util.height)]
-        pass
+    def getNewApple(self, width, height, ui):
+        self.x = ui.random(width)
+        self.y = ui.random(height)
+        
