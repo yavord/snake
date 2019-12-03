@@ -1,7 +1,7 @@
 def processEvent(event, snakeController, appleController, ui):
     if event.name == 'alarm':
         ui.clear()
-        appleController.placeApple()
+        # appleController.placeApple()
         snakeController.animateSnake()
         snakeController.placeSnake()
         ui.show()
