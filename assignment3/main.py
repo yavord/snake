@@ -1,6 +1,6 @@
 from lib.ipy_lib import SnakeUserInterface
 from lib.util import height, width, scale, speed
-from lib.process_event import processEvent
+from lib.event_handler import eventHandler
 from controller import *
 from model import *
 
@@ -19,7 +19,7 @@ def main():
 
     while True:
         event = ui.get_event()
-        processEvent(event, snakeController, appleController, ui, width, height)
+        eventHandler(event, snakeController, appleController, ui, width, height)
 
 if __name__ == "__main__":
     main()
