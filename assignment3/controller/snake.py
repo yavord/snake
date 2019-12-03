@@ -7,7 +7,7 @@ class SnakeController:
         pass
 
     def eatApple(self):
-        pass
+        self.snake.growSnake()
 
     def gameOver(self):
         pass

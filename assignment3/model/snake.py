@@ -9,5 +9,12 @@ class Snake:
         ]
 
     def growSnake(self):
-        # lastIndex = self.snake[-1]
-        pass
+        lastIndex = self.snake[-1]
+        if lastIndex.direction == 'l':
+            self.snake.append(SnakePiece(lastIndex.x+1, lastIndex.y, lastIndex.direction))
+        elif lastIndex.direction == 'r':
+            self.snake.append(SnakePiece(lastIndex.x-1, lastIndex.y, lastIndex.direction))
+        elif lastIndex.direction == 'u':
+            self.snake.append(SnakePiece(lastIndex.x, lastIndex.y+1, lastIndex.direction))
+        elif lastIndex.direction == 'd':
+            self.snake.append(SnakePiece(lastIndex.x, lastIndex.y-1, lastIndex.direction))
