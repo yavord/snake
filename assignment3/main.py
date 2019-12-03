@@ -7,8 +7,9 @@ def main():
     ui = SnakeUserInterface(
         height,
         width,
-        scale
+        scale,
     )
+
     ui.set_animation_speed(speed)
     snake = Snake(height, width)
     apple = Apple(ui.random(width), ui.random(height))
@@ -18,6 +19,7 @@ def main():
     while True:
         event = ui.get_event()
         eventHandler(event, snakeController, appleController, ui, width, height)
+
 
 if __name__ == "__main__":
     main()
