@@ -1,12 +1,9 @@
-# from assignment3.model import *
-from lib.ipy_lib import SnakeUserInterface
-
 class SnakeController:
     def __init__(self, snake, ui):
         self.snake = snake
         self.ui = ui
     
-    def animateSnake(self):
+    def animateSnake(self, direction):
         pass
 
     def eatApple(self):
@@ -17,4 +14,4 @@ class SnakeController:
 
     def placeSnake(self):
         for snakepiece in self.snake.snake:
-            self.ui.place(snakepiece[0], snakepiece[1], snakepiece.color)
+            self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)

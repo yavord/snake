@@ -1,10 +1,6 @@
 class SnakePiece:
-    def __init__(self, coords, direction):
-        self.coords = coords
+    def __init__(self, x, y, direction):
+        self.x = x
+        self.y = y
         self.direction = direction
         self.color = 2
-
-
-    def setValues(self, coords, direction):
-        self.coords = coords
-        self.direction = direction
