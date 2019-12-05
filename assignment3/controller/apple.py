@@ -8,8 +8,8 @@ class AppleController:
         self.ui.place(self.apple.x, self.apple.y, self.apple.color)
 
     def getNewApple(self, width, height):
-        self.apple.x = self.ui.random(width)
-        self.apple.y = self.ui.random(height)
+        self.apple.x = self.ui.random(width-1)
+        self.apple.y = self.ui.random(height-1)
 
     def checkApplePosition(self, snake):
         snakePieces = snake.snake
