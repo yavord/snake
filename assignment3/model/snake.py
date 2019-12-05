@@ -1,7 +1,7 @@
 from snakepiece import SnakePiece
 
 class Snake:
-    def __init__(self, height, width):
+    def __init__(self, width, height):
         self.snake = [
             SnakePiece(width/2, height/2, 'r'),
             SnakePiece(width/2-1, height/2, 'r'),
