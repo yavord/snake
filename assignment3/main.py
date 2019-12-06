@@ -12,7 +12,8 @@ def main():
 
     ui.set_animation_speed(speed)
     snake = Snake(height, width)
-    apple = Apple(ui.random(width), ui.random(height))
+    # apple = Apple(ui.random(width), ui.random(height))
+    apple = Apple(15, 15)
     snakeController = SnakeController(snake, ui)
     appleController = AppleController(apple, ui)
 

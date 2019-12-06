@@ -3,9 +3,16 @@ from snakepiece import SnakePiece
 class Snake:
     def __init__(self, width, height):
         self.snake = [
-            SnakePiece(width/2, height/2, 'r'),
-            SnakePiece(width/2-1, height/2, 'r'),
-            SnakePiece(width/2-2, height/2, 'r'),
+            # SnakePiece(width/2, height/2, 'r'),
+            # SnakePiece(width/2-1, height/2, 'r'),
+            # SnakePiece(width/2-2, height/2, 'r'),
+            SnakePiece(18, 15, 'r'),
+            SnakePiece(17, 15, 'r'),
+            SnakePiece(16, 15, 'r'),
+            SnakePiece(15, 15, 'r'),
+            SnakePiece(14, 15, 'r'),
+            SnakePiece(13, 15, 'r'),
+            SnakePiece(12, 15, 'r'),
         ]
 
     def moveSnakeOneOver(self):
