@@ -13,15 +13,13 @@ class AppleController:
 
     def checkApplePosition(self, snake):
         for snakePiece in snake.snake:
-
+            print(snakePiece.x)
         #     print('appleX: '+str(self.apple.x))
         #     print('appleY: '+str(self.apple.y))
         #     print('snakepieceX: '+str(snakePiece.x))
         #     print('snakepieceY: '+str(snakePiece.y))
         # print('run complete')
-
             if [self.apple.x, self.apple.y]  == [snakePiece.x, snakePiece.y]:
-                print('yup')
                 return True
             else:
                 return False
