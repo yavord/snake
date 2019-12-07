@@ -12,9 +12,16 @@ class AppleController:
         self.apple.y = self.ui.random(width-1)
 
     def checkApplePosition(self, snake):
-        snakePieces = snake.snake
-        for snakePiece in snakePieces:
-            if self.apple.x == snakePiece.x and self.apple.y == snakePiece.y:
+        for snakePiece in snake.snake:
+
+        #     print('appleX: '+str(self.apple.x))
+        #     print('appleY: '+str(self.apple.y))
+        #     print('snakepieceX: '+str(snakePiece.x))
+        #     print('snakepieceY: '+str(snakePiece.y))
+        # print('run complete')
+
+            if [self.apple.x, self.apple.y]  == [snakePiece.x, snakePiece.y]:
+                print('yup')
                 return True
             else:
                 return False
