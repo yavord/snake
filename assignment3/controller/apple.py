@@ -12,8 +12,8 @@ class AppleController:
         self.apple.y = self.ui.random(width-1)
 
     def checkApplePosition(self, snake):
-        for snakePiece in snake:
-            print(snakePiece.x)
+        for snakePiece in snake.snake:
+            print('apple/snake check')
         #     print('appleX: '+str(self.apple.x))
         #     print('appleY: '+str(self.apple.y))
         #     print('snakepieceX: '+str(snakePiece.x))

@@ -4,8 +4,9 @@ def eventHandler(event, snakeController, appleController, ui, width, height):
         snakeController.animateSnake()
         snakeController.placeSnake()
         appleController.placeApple()
-        if appleController.checkApplePosition(snakeController.snake) == True:
-            print('apple/snake check')
+        appleController.checkApplePosition(snakeController.snake)
+        # if appleController.checkApplePosition(snakeController.snake) == True:
+        #     print('apple/snake check')
         if snakeController.checkSnakePosition(appleController.apple) == True:
             snakeController.eatApple()
             appleController.getNewApple(width, height)
