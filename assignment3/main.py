@@ -17,6 +17,9 @@ def main():
     snakeController = SnakeController(snake, ui)
     appleController = AppleController(apple, ui)
 
+    for snakePiece in snake.snakeList:
+        print(snakePiece)
+
     while True:
         event = ui.get_event()
         eventHandler(event, snakeController, appleController, ui, width, height)

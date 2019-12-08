@@ -16,11 +16,11 @@ class SnakeController:
         self.snake.growSnake()
 
     def checkSnakePosition(self, apple):
-        firstIndex = self.snake.snake[0]
+        firstIndex = self.snake.snakeList[0]
         if [firstIndex.x, firstIndex.y] == [apple.x, apple.y]:
             return True
-        for i in range(1, len(self.snake.snake)-1):
-            if [firstIndex.x, firstIndex.y] == [self.snake.snake[i].x, self.snake.snake[i].y]:
+        for i in range(1, len(self.snake.snakeList)-1):
+            if [firstIndex.x, firstIndex.y] == [self.snake.snakeList[i].x, self.snake.snakeList[i].y]:
                 return False 
 
     def gameOver(self):
@@ -28,7 +28,7 @@ class SnakeController:
         self.ui.stay_open()
 
     def placeSnake(self):
-        for snakepiece in self.snake.snake:
+        for snakepiece in self.snake.snakeList:
             try:
                 self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
             except:

@@ -2,7 +2,7 @@ from snakepiece import SnakePiece
 
 class Snake:
     def __init__(self, width, height):
-        self.snake = [
+        self.snakeList = [
             # SnakePiece(width/2, height/2, 'r'),
             # SnakePiece(width/2-1, height/2, 'r'),
             # SnakePiece(width/2-2, height/2, 'r'),
@@ -19,7 +19,7 @@ class Snake:
         ]
 
     def moveSnakeOneOver(self):
-        for snakePiece in self.snake:
+        for snakePiece in self.snakeList:
             if snakePiece.direction == 'u':
                 snakePiece.y -= 1
             elif snakePiece.direction == 'd':
@@ -30,27 +30,27 @@ class Snake:
                 snakePiece.x += 1
 
     def growSnake(self):
-        lastIndex = self.snake[-1]
+        lastIndex = self.snakeList[-1]
         if lastIndex.direction == 'l':
-            self.snake.append(SnakePiece(lastIndex.x+1, lastIndex.y, lastIndex.direction))
+            self.snakeList.append(SnakePiece(lastIndex.x+1, lastIndex.y, lastIndex.direction))
         elif lastIndex.direction == 'r':
-            self.snake.append(SnakePiece(lastIndex.x-1, lastIndex.y, lastIndex.direction))
+            self.snakeList.append(SnakePiece(lastIndex.x-1, lastIndex.y, lastIndex.direction))
         elif lastIndex.direction == 'u':
-            self.snake.append(SnakePiece(lastIndex.x, lastIndex.y+1, lastIndex.direction))
+            self.snakeList.append(SnakePiece(lastIndex.x, lastIndex.y+1, lastIndex.direction))
         elif lastIndex.direction == 'd':
-            self.snake.append(SnakePiece(lastIndex.x, lastIndex.y-1, lastIndex.direction))
+            self.snakeList.append(SnakePiece(lastIndex.x, lastIndex.y-1, lastIndex.direction))
 
     def changeFirstIndexDirection(self, direction):
-        if self.snake[0].direction == 'u' and direction != 'd':
-            self.snake[0].direction = direction
-        elif self.snake[0].direction == 'd' and direction != 'u':
-            self.snake[0].direction = direction
-        elif self.snake[0].direction == 'l' and direction != 'r':
-            self.snake[0].direction = direction
-        elif self.snake[0].direction == 'r' and direction != 'l':
-            self.snake[0].direction = direction
+        if self.snakeList[0].direction == 'u' and direction != 'd':
+            self.snakeList[0].direction = direction
+        elif self.snakeList[0].direction == 'd' and direction != 'u':
+            self.snakeList[0].direction = direction
+        elif self.snakeList[0].direction == 'l' and direction != 'r':
+            self.snakeList[0].direction = direction
+        elif self.snakeList[0].direction == 'r' and direction != 'l':
+            self.snakeList[0].direction = direction
 
     def getNewDirections(self):
-        for i in range(len(self.snake)-1, 0, -1):
-            self.snake[i].direction = self.snake[i-1].direction
+        for i in range(len(self.snakeList)-1, 0, -1):
+            self.snakeList[i].direction = self.snakeList[i-1].direction
             

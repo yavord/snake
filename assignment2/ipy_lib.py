@@ -726,7 +726,7 @@ class SnakeUserInterface(object):
 		self.snake_interface = _Snake(width, height, _ui_factory.mainroot, scale)
 		self.EMPTY = _Snake.EMPTY
 		self.FOOD = _Snake.FOOD
-		self.SNAKE = _Snake.SNAKE
+		self.SNAKE = _snake.snake
 		self.WALL = _Snake.WALL
 	
 	def place(self, x, y, color):
