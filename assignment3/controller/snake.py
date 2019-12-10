@@ -27,10 +27,21 @@ class SnakeController:
         self.ui.print_('Game Over ')
         self.ui.stay_open()
 
-    def placeSnake(self):
+    def placeSnake(self, height, width):
         for snakepiece in self.snake.snakeList:
             try:
                 self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
             except:
-                snakepiece.x = 0
-                self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
+                if snakepiece.x > height:
+                    snakepiece.x = 0
+                    self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
+                elif snakepiece.x < 0:
+                    snakepiece.x = height-1
+                    self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
+                elif snakepiece.y > width:
+                    snakepiece.y = 0
+                    self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
+                elif snakepiece.y < 0:
+                    snakepiece.y = width-1
+                    self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
+

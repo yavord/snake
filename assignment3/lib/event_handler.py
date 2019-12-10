@@ -7,7 +7,7 @@ def eventHandler(event, snakeController, appleController, ui, width, height):
     if event.name == 'alarm':
         ui.clear()
         snakeController.animateSnake()
-        snakeController.placeSnake()
+        snakeController.placeSnake(height, width)
         appleController.placeApple()
         if snakeController.checkSnakePosition(appleController.apple) == True:
             snakeController.eatApple()
