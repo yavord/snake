@@ -10,7 +10,7 @@ def main():
         scale,
     )
 
-    ui.set_animation_speed(speed)
+    ui.print_('Welcome, please press space to start (or pause) the game. '+'\n')
     snake = Snake(height, width)
     apple = Apple(ui.random(width), ui.random(height))
     snakeController = SnakeController(snake, ui)
