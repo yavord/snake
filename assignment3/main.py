@@ -12,13 +12,9 @@ def main():
 
     ui.set_animation_speed(speed)
     snake = Snake(height, width)
-    # apple = Apple(ui.random(width), ui.random(height))
-    apple = Apple(15, 15)
+    apple = Apple(ui.random(width), ui.random(height))
     snakeController = SnakeController(snake, ui)
     appleController = AppleController(apple, ui)
-
-    for snakePiece in snake.snakeList:
-        print(snakePiece)
 
     while True:
         event = ui.get_event()

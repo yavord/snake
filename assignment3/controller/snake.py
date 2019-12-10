@@ -33,4 +33,3 @@ class SnakeController:
                 self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
             except:
                 self.gameOver()
-                #TODO: check how to set up try/catch statements
