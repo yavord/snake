@@ -27,10 +27,8 @@ def eventHandler(event, snakeController, appleController, ui, width, height):
     elif event.data == 'space':
         if gameOn == False:
             gameOn = True
-            print(gameOn)
             ui.set_animation_speed(util.speed)
         else:
             gameOn = False
-            print(gameOn)
             ui.set_animation_speed(0)
             ui.print_('Game paused, please press space to start again '+'\n')
