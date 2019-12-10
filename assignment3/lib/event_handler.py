@@ -22,7 +22,7 @@ def eventHandler(event, snakeController, appleController, ui, width, height):
         snakeController.updateDirections()
         ui.show()
     elif event.name == 'arrow' and gameOn == True:
-            ui.wait(20)
+            ui.wait(25)
             snakeController.changeDirection(event.data)
     elif event.data == 'space':
         if gameOn == False:
