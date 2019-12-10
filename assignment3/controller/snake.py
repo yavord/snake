@@ -32,4 +32,5 @@ class SnakeController:
             try:
                 self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
             except:
-                self.gameOver()
+                snakepiece.x = 0
+                self.ui.place(snakepiece.x, snakepiece.y, snakepiece.color)
