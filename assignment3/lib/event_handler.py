@@ -5,6 +5,7 @@ gameOn = False
 def eventHandler(event, snakeController, appleController, ui, width, height):
     global gameOn
     if event.name == 'alarm':
+        ui.wait(5)
         ui.clear()
         snakeController.animateSnake()
         snakeController.placeSnake(height, width)
