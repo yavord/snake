@@ -1,3 +1,3 @@
 # snake
 
-Main snake app is located in assignment3
+Snake game using the ipy_lib library
